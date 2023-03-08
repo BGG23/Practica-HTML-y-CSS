@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" name="viewport" content="text/html; charset=iso-8859-1" charset="UTF-8">
+        <title>Practica HTML - CSS</title>
+        <link rel="stylesheet" type="text/css" href="CSS.css" title="style" />
+        <html xmlns="http://www.w3.org/1999/xhtml">
+    </head>
+    
+    <header>
+        <ul id="menu_oculto">
+            <li><a href="Inicio.html">Inicio</a></li>
+            <li><a href="Galeria.html">Galeria</a></li>
+        </ul>
+    </header>
+
+    <body>
+        <h1>Formulario</h1>
+        <form method ="post" id="bloque">
+            <div>
+                <label>Usuario</label><br>
+                <input type="text" name="user" size="40" required/>
+            </div>
+            <div>
+                <label>Contraseña</label><br>
+                <input type="password" name="password" minlength="8" required/>
+            </div>
+            <div>
+                <label>Gmail</label><br>
+                <input type="email" name="email" placeholder="ejemplo@ejemplo.com" />
+            </div>
+            <div>
+                <label>Pais </label><br>
+                    <select id="pais">
+                        <option></option>
+                        <option>Europa</option>
+                        <option>Asia</option>
+                        <option>Oceania</option>
+                        <option>Africa</option>
+                        <option>Norte America</option>
+                        <option>Sud America</option>
+                    </select>
+            </div>
+            <div>
+                <label>Cumpleaños </label><br>
+                <input type="date" name="birthday" />
+            </div>
+            <fieldset>
+                <label id="casilla"></label>
+                    <input id= "casilla" type="checkbox" name="casilla" required> Acepto recibir email con contenido actualizado
+            </fieldset>
+            <br>
+            <fieldset>
+                <label id="reset"></label>
+                    <button id= "reset" type="reset" name="reset" value="Reset">Reset</button>
+                <label for="submit"></label>
+                    <button id= "submit" type="submit" name="submit" value="Submit">Submit</button>
+            </fieldset>
+        </form>
+    </body>
+    <br>
+    <footer>
+        <p id="footer">Belén Gamero García - DAW</p>
+    </footer>
+</html>

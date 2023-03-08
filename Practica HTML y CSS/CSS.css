@@ -1,0 +1,264 @@
+/*Apartado Menu lateral*/
+#menu_oculto { /*diseño del menu oculto*/
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 100%;
+    width: 150px;
+    padding: 1em;
+    font-size: 1.2em;
+    background-color: #83EAA0;
+    transform: translateX(1em);
+    transition: 0.3s transform;
+    list-style: none;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.384);
+}
+#menu_oculto:hover{/*desplazamiento del menu*/
+    transform: translateX(100%);
+}
+a:hover{
+    background-color: #ffffff;
+}
+a {
+    color: #1B6630;
+    text-decoration: none;
+}
+
+/*Apartado Menu normal*/
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #83EAA0;
+    font-size: 1em;
+    text-align: center;
+    position: fixed;
+}
+#menudos{ /*solo para dar fondo al desplegable*/
+    background-color: #83EAA0;
+}
+#menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#menu li a {
+    display: block;
+    color: #1B6630;
+    padding: 12px 15px;
+    text-decoration: none;
+}
+
+#menu li a:hover, #menudos li a:hover{
+    background-color: #ffffff;
+    text-decoration: none;
+}
+#menu ul {
+    display: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    width:400px;
+}
+#menu li:hover ul {
+    display: block;
+}
+/*Inicio*/
+h1{
+    color: #1B6630;
+    font: Arial, sans-serif;
+    text-align: center;
+}
+p#footer{ /*diseño de la parte inferior*/
+    margin-bottom: 50px;
+    color: #1B6630;
+    font: Arial, sans-serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*estilo tabla*/
+table {
+    width: 50%;
+    border: 1px solid #3BE66B;
+    background-color: #ffffff;
+    color: #1B6630;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tabla img{/*dimensiones de laa imagenes de la tabla*/
+    width: 100px;
+    height: 100px;
+}
+th, td {
+    width: 15%;
+    text-align: center;
+    border: 1px solid #3BE66B;
+    border-collapse: collapse;
+    padding: 0.3em;
+    font: 1em Arial, sans-serif;
+}
+caption { /*diseño del titulo de la tabla*/
+    font: 1.5em Arial, sans-serif;
+    padding: 0.3em;
+    color: #fff;
+    background: #3BE66B;
+}
+th {
+    background: #d8d8d8;
+}
+
+/*Apartado completo del Formulario*/
+body{
+    background-color: #e6ffdc;
+    font: 1em Arial, sans-serif;
+    color: rgb(0, 0, 0);
+}
+#bloque {/*estilo del form, es donde esta el formulario*/
+    background-color: rgb(229, 255, 187);
+    margin: 0 auto;
+    width: 497px;
+    height: 550px;
+    color: #1B6630;
+    font-weight: bold; 
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.384);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    animation-name: animacion;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+}
+@keyframes animacion { /*parametros para hacer la animacion del desplacamiento del formulario*/
+    0% {
+      opacity: 0;
+      transform: translateX(-1000px);
+    }
+    20%,80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+div{ /*para dar forma a cada apartado del formulario*/
+    width: auto;
+    padding: 20px 0 5px 35px;
+    box-sizing: border-box;
+}
+
+select#pais, input{/*form de donde se introduce la informacion*/
+    width: 325px;
+    height: 30px;
+    border-radius: 8px;
+    border-color: black;
+}
+input:hover, select:hover{ /*para cuando se pasa por encima de los apartados*/
+    background-color: #83EAA0;
+    cursor: pointer;
+}
+input:focus, select:focus{ /*para cuando estas editando un apartado*/
+    background-color: #3BE66B;
+}
+fieldset{ /*estilo del fondo de la casilla de verificacion y de los botones*/
+    background-color: #ffffff;
+    border-color: black;
+    justify-content: center;
+    width: 80%;
+    border-radius: 8px;
+    margin: 25px 0 -25px 35px;
+}
+#casilla{ /*tamaño de la casilla de verificacion*/
+    width: 20px;
+    height: 20px;
+    vertical-align: baseline;
+}
+
+button#reset{ /*boton izquierdo*/
+    float: left; 
+    margin: 5px 0 0 50px; 
+    font: 1em Arial, sans-serif;
+    justify-content: center;
+}
+button#submit{ /*boton derecho*/
+    justify-content: center;
+    float: right;
+    margin: 5px 50px 0 0;
+    font: 1em Arial, sans-serif;
+}
+
+/*Apartado completo de las Imagenes*/
+section{ /*estilo de fondo de la galeria*/
+    border: 3px solid #3BE66B;
+    background-color: #ffffff;
+}
+
+#galeria1 { /*estilo del primer bloque*/
+    text-align: center;
+    margin: 1em auto;
+    max-width: 960px;
+    width: 100%;
+    column-count: 3;
+
+}
+#galeria2 { /*estilo del segundo bloque*/
+    margin: 1em auto;
+    width: 100%;
+    max-width: 960px;
+    column-count: 3;
+    
+}
+img{ /*tamaño y posicion de las imagenes*/
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+
+}
+#galeria1 img:hover{ /*movimiento de la imagen*/
+    object-fit: none;
+}
+#galeria2 img{ /*tamaño y posicion de las imagenes*/
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+}
+#galeria2 img:hover{ /*movimiento de la imagen y borde*/
+    border: 3px solid #3BE66B;
+    object-fit: scale-down;
+}
+
+p#titulo{ /*titulo de los bloques*/
+    color: #1B6630;
+    font: Arial, sans-serif;
+    text-align: center;
+    font-size: x-large;
+}
+p{ /*texto del primer bloque*/
+    text-align: center;
+}
+
+/*Media Queries*/
+/* Dispositivos pequeños (tabletas verticales y teléfonos grandes, 600 px y más) */
+@media only screen and (min-width: 600px) {
+    body {background: #ffc0cb;}
+}
+
+/* Dispositivos medianos (tabletas horizontales, 768 px y más) */
+@media only screen and (min-width: 768px) {
+    body {background: #e386ff;}
+} 
+
+/* Dispositivos grandes (portátiles y pantallas, 992px y más) */
+@media only screen and (min-width: 992px) {
+    body {background: #ffbc41;}
+} 
+
+/* Dispositivos extragrandes (portátiles y pantallas grandes, 1200 px y más) */
+@media only screen and (min-width: 1200px) {
+    body {background: #e6ffdc;}
+}
+
+
